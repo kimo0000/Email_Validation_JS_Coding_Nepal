@@ -1,0 +1,75 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  background: radial-gradient(#f50 30%, #fa7 100%);
+  display: grid;
+  place-items: center;
+}
+.wrapper {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.validation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  position: relative;
+}
+.validation input {
+  width: 100%;
+  padding: 6px 30px;
+  border: 1px solid #000;
+  border-radius: 6px;
+}
+.validation i {
+  position: absolute;
+}
+.validation .envelope {
+  position: absolute;
+  left: 8px;
+  color: blueviolet;
+}
+.validation .exclamation {
+  right: 80px;
+  color: #f50;
+  display: none;
+}
+.validation.active .exclamation {
+  display: block;
+}
+.validation .check {
+  padding: 10px;
+  border-radius: 6px;
+  background-color: blueviolet;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+.validation .check:hover {
+  opacity: 1;
+}
+.result {
+  display: none;
+}
+.result.active {
+  display: block;
+  color: #f50;
+}
